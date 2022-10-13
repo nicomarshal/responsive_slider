@@ -3,9 +3,9 @@
 :root {
 	--main-font: sans-serif;
 	--font-size: 16px;
-	--main-color: #f7df1e;
+	--main-color: #5898bd;
 	--second-color: #222;
-	--main-modal-color: rgba(247, 222, 30, 0.85);
+	--main-modal-color: rgba(82, 152, 189, 0.85);
 	--second-modal-color: rgba(34, 34, 34, 0.85);
 	--container-width: 1200px;
 }
@@ -59,19 +59,19 @@ img {
 	text-align: center;
 }
 
-/* ************Responsive Slider************ */
-.slider {
+/* ************Responsive Slider 1************ */
+.slider1 {
 	position: relative;
 	width: 80%;
 	margin: 1rem auto;
 }
 
-.slider-slides {
+.slider1 .slider-slides {
 	position: relative;
 	height: 400px;
 }
 
-.slider-slide {
+.slider1 .slider-slide {
 	position: absolute;
 	top: 0;
 	left: 0;
@@ -82,19 +82,19 @@ img {
 	transition: opacity .3s ease;
 }
 
-.slider-slide img {
+.slider1 .slider-slide img {
 	height: inherit;
 	width: inherit;
 	object-fit: cover;
 	object-position: 50% 0%; 
 }
 
-.slider-slide.active {
+.slider1 .slider-slide.active {
 	opacity: 1;
 	visibility: visible;
 }
 
-.slider-btns {
+.slider1 .slider-btns {
 	position: absolute;
 	width: 100%;
 	top: 50%;
@@ -105,7 +105,7 @@ img {
 	font-weight: bold;
 }
 
-.slider a {
+.slider1 a {
 	display: block;
 	width: 4rem;
 	height: 4rem;
@@ -117,6 +117,60 @@ img {
 	transition: all 0.3s ease;
 }
 
-.slider a:hover {
+.slider1 a:hover {
+	color: #4d4d4d;
+}
+
+/* ************Responsive Slider 2************ */
+.slider2 {
+	position: relative;
+	width: 100%;
+	margin: 1rem auto;
+}
+
+.slider2 .slider-slides {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.slider2 .slider-slide {
+	display: none;
+}
+
+.slider2 .slider-slide.active {
+	display: block;
+}
+
+.slider2 .slider-slide img {
+	min-height: 150px;
+	object-fit: cover;
+	object-position: 50% 0%; 
+}
+
+.slider2 .slider-btns {
+	position: absolute;
+	width: 100%;
+	top: 50%;
+	margin-top: -2rem;
+	display: flex;
+	justify-content: space-between;
+	font-size: 3rem;
+	font-weight: bold;
+}
+
+.slider2 a {
+	display: block;
+	width: 4rem;
+	height: 4rem;
+	border-radius: 50%;
+	border: thin solid #000;
+	text-decoration: none;
+	background-color: #fff;
+	color: #000;
+	transition: all 0.3s ease;
+}
+
+.slider2 a:hover {
 	color: #4d4d4d;
 }

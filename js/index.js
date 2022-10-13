@@ -1,8 +1,9 @@
-import responsiveSlider from "./responsive_slider.js";
+import {responsiveSlider1, responsiveSlider2} from "./responsive_slider.js";
 
 const d = document;
 
 d.addEventListener("DOMContentLoaded", e => {
-	responsiveSlider();
+	responsiveSlider1();
+	responsiveSlider2();
 })
 
