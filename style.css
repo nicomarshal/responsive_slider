@@ -50,12 +50,10 @@ img {
 
 .section {
 	padding: 2rem;
-	padding-top: 4rem;
 	margin-left: auto;
 	margin-right: auto;
 	width: 100%;
 	max-width: var(--container-width);
-	min-height: 100vh;
 	text-align: center;
 }
 
@@ -173,4 +171,90 @@ img {
 
 .slider2 a:hover {
 	color: #4d4d4d;
+}
+
+
+/* ********* Slider 3 ********* */
+@keyframes carousel-slide {
+	0% {
+		transform: translateX(0%);
+	}
+
+	25% {
+		transform: translateX(-25%);
+	}
+
+	50% {
+		transform: translateX(-50%);
+	}
+
+	75% {
+		transform: translateX(-75%);
+	}
+}
+
+.slider3 {
+	padding: 2rem 0;
+	max-width: 800px;
+	text-align: center;
+	overflow-x: hidden;
+	background-color: lightgrey;
+}
+
+.slider3 input {
+	display: none;
+}
+
+.slider3 .slides {
+	padding-left: 0;
+	/* 100% por cada slide */
+	width: 400%;
+	display: flex;
+	list-style: none;
+	transition: transform 0.5s ease-in-out;
+	animation: carousel-slide 12s ease-in-out 3s;
+}
+
+.slider3 .avatar {
+	border-radius: 50%;
+	width: 150px;
+	height: 150px;
+}
+
+.slider3 label {
+	border: medium solid gray;
+	border-radius: 50%;
+	margin: 0 0.25rem;
+	display: inline-block;
+	width: 0.75rem;
+	height: 0.75rem;
+	cursor: pointer;
+}
+
+.slides h3 {
+	color: var(--main-color);
+}
+/*El signo ~ es un selector que significa
+"mueve al hermano que tienes al lado"*/
+#slide-1:checked ~ .slides {
+	transform: translateX(0%);
+}
+
+#slide-2:checked ~ .slides {
+	transform: translateX(-25%);
+}
+
+#slide-3:checked ~ .slides {
+	transform: translateX(-50%);
+}
+
+#slide-4:checked ~ .slides {
+	transform: translateX(-75%);
+}
+
+#slide-1:checked ~ .slides-nav label#dot-1,
+#slide-2:checked ~ .slides-nav label#dot-2,
+#slide-3:checked ~ .slides-nav label#dot-3,
+#slide-4:checked ~ .slides-nav label#dot-4 {
+	background-color: gray;
 }
